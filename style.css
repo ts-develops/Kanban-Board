@@ -1,0 +1,35 @@
+*  { 
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+}
+
+/* customising layout */
+.board{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column{
+    padding: 50px;
+    margin: 20px;
+    border: 5px solid black;
+    text-align: center;
+}
+
+h2{
+    color: red;
+}
+
+
+
+/* styling the card class cursors */
+.card {
+    cursor: grab;
+}
+
+.card:active {
+    cursor: grabbing;
+}
