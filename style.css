@@ -1,17 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap');
+
 *  { 
     margin: 0; 
     padding: 0; 
     border: 0; 
+    font-family: 'Cormorant SC', serif;
 }
 
-/* body */
 body{
-    background-image: url('/rose-petals.png');
+    background:#fffffe;
     background-size: cover;
-    color: white;
+    color: #094067;
 }
 
-/* title */
 .title{
     display: flex;
     justify-content: center;
@@ -23,34 +24,43 @@ body{
 
 /* customising layout */
 .board{
-    height: 60vh;
+    height: 30vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .column{
-    padding: 20px;
+    padding: 5px;
     margin: 20px;
-    border: 5px solid grey;
-    background-color: grey;
+    border: 2px solid rgb(188, 188, 188);
+    background-color: rgb(161, 161, 161);
     text-align: center;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .card{
-color: white;
-padding: 20px;
-border: 5px solid black;
-margin: 5px;
-border-radius: 5px;
-background-color: black;
+    color: white;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 10px;
+    border-radius: 3px;
+    background-color: black;
 }
 
-h2{
-    border: 0.5px solid white;
+ h2.todo{
+    color:  #fffffe;
+    margin-bottom: 20px;
 }
 
+h2.progress{
+    color:  #fffffe;
+    margin-bottom: 20px;
+}
+h2.complete{
+    color:  #fffffe;
+    margin-bottom: 20px;
+}
 
 
 /* styling the card class cursors */
@@ -60,4 +70,14 @@ h2{
 
 .card:active {
     cursor: grabbing;
+}
+
+/* styling card drag and drop effect */
+.card{
+    transition: all 0.3s cubic-bezier(0.39, 0, 0.2, 1) ;
+}
+
+.card.dragging{
+    opacity: .5;
+    transform: scale(.8)
 }
