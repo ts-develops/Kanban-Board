@@ -18,9 +18,21 @@ body{
     justify-content: center;
     align-items: center;
     padding-top: 50px;
-    height: 20vh;
+    height: 15vh;
 }
 
+/* creating a typewriter effect on title */
+.title{
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: identifier 3.5s steps(40,end)
+}
+
+@keyframes identifier {
+    from {width:0}
+    to {width: 100%;}
+}
 
 /* customising layout */
 .board{
@@ -81,3 +93,17 @@ h2.complete{
     opacity: .5;
     transform: scale(.8)
 }
+
+/* styling column on drag enter and leave */
+.column{
+    transition: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1)
+}
+
+.column.drop{
+    border: 2px dashed black;
+}
+
+.column.drop article {
+    pointer-events: none;
+}
+
